@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &50317519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50317520}
+  m_Layer: 0
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &50317520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317519}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.7, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604307076}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &229148021
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +167,7 @@ GameObject:
   - component: {fileID: 229148023}
   - component: {fileID: 229148022}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,6 +1268,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 855153932454047515, guid: a4d350b2f9fee3b4aadbe81b77631c22, type: 3}
   m_PrefabInstance: {fileID: 1548160951}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1604307076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+  m_PrefabInstance: {fileID: 1914474611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1856051978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1369,6 +1405,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4726027212753593040, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
       propertyPath: m_Name
       value: Cannon_Prefab
@@ -1415,9 +1475,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4726027211282978758, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 50317520}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4726027212753593040, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1914474613}
+    - targetCorrespondingSourceObject: {fileID: 4726027212753593040, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1914474615}
   m_SourcePrefab: {fileID: 100100000, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+--- !u!1 &1914474612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4726027212753593040, guid: 40c7302fa202bd242a9d0d72d2abe3ad, type: 3}
+  m_PrefabInstance: {fileID: 1914474611}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1914474613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914474612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e66733062af99342b5f863f9c144cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 20
+  Xdegrees: 0
+  Ydegrees: 0
+  cannonTransform: {fileID: 1604307076}
+--- !u!114 &1914474615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914474612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba5c7c80ac21c047abe989c109d247f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cannonBallPrefabs: {fileID: 3671322242038314617, guid: 6a19b09ebe1bac64c95675e24367a6a8, type: 3}
+  cannonShootPoint: {fileID: 50317520}
+  cannonBody: {fileID: 1604307076}
+  shootForce: 30
 --- !u!1 &2114779737
 GameObject:
   m_ObjectHideFlags: 0
