@@ -4,22 +4,28 @@ using UnityEngine;
 
 public class CannonShoot : MonoBehaviour
 {
+    private CannonAmmo cannonAmmo;
+
     public GameObject cannonBallPrefabs;
-    public Transform cannonShootPoint;
+    public Transform cannonShotPoint;
     public float shootForce;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        if(Input.GetMouseButtonDown(0))
+        cannonAmmo = GetComponent<CannonAmmo>();
+    }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
     }
-
-    void Shoot () 
+    void Shoot()
     {
-        GameObject cannonball = Instantiate(cannonBallPrefabs, cannonShootPoint.position, cannonShootPoint.rotation);
-        cannonball.GetComponent<Rigidbody>().AddForce(cannonball.transform.forward * shootForce, ForceMode.Impulse);
+        if (cannonAmmo.CurrentAmmo <= 0) return;
+        GameObject canonBall = Instantiate(cannonBallPrefabs, cannonShotPoint.position, cannonShotPoint.rotation);
+        canonBall.GetComponent<Rigidbody>().AddForce(canonBall.transform.forward  * shootForce, ForceMode.Impulse);
+        cannonAmmo.CurrentAmmo--;
     }
 }

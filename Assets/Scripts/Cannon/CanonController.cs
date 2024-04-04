@@ -7,7 +7,7 @@ public class CanonController : MonoBehaviour
     public float rotationSpeed;
     public float Xdegrees, Ydegrees;
 
-    public Transform cannonTransform;
+    public Transform cannonBody;
     // Update is called once per frame
     void Update()
     {
@@ -21,8 +21,8 @@ public class CanonController : MonoBehaviour
         Xdegrees += horizontalInput * rotationSpeed * Time.deltaTime;
         Ydegrees += verticalInput * rotationSpeed * Time.deltaTime;
 
-        Xdegrees = Mathf.Clamp(Xdegrees, -45, 45);
-        Ydegrees = Mathf.Clamp(Ydegrees, -6, 45);
-        cannonTransform.localEulerAngles = new Vector3(0, Ydegrees, Xdegrees);
+        Xdegrees = Mathf.Clamp(Xdegrees, -43, 43);
+        Ydegrees = Mathf.Clamp(Ydegrees, -7, 48);
+        cannonBody.localEulerAngles = new Vector3(0, Ydegrees, Xdegrees);
     }
 }

@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: aba5c7c80ac21c047abe989c109d247f
+guid: d3751fe891419084d86f7343a74bdf1e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - cannonBallPrefabs: {instanceID: 0}
-  - cannonShootPoint: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
